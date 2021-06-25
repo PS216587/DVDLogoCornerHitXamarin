@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:DVDLogo"
+             x:Class="DVDLogo.MainPage">
+    <Grid BackgroundColor="#1e1e1e">
+        <Grid BackgroundColor="#1e1e1e" x:Name="myGrid" Margin="50">
+            <StackLayout>
+                <Label x:Name="lb1" FontSize="30"/>
+                <Label x:Name="lb2" FontSize="30" />
+            </StackLayout>
+            <StackLayout VerticalOptions="Start" HorizontalOptions="Start">
+                <!--<Button  Rotation="0" TranslationX="0" WidthRequest="100" HeightRequest="100" Margin="-50,-50,0,0" x:Name="translateButton" Pressed="translateButton_Pressed" BackgroundColor="Red"/>-->
+                <Image x:Name="translateButton" WidthRequest="100" HeightRequest="100" Margin="-50,-50,0,0" Source="{Binding dvdImage, Mode=OneWay}"  />
+            </StackLayout>
+        </Grid>
+        <Button BackgroundColor="Transparent" Pressed="translateButton_Pressed"/>
+    </Grid>
+
+</ContentPage>

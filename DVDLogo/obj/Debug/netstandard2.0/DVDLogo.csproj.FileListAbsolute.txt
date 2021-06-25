@@ -1,0 +1,42 @@
+C:\school\MAD\DVDLogo\DVDLogo\bin\Debug\netstandard2.0\DVDLogo.deps.json
+C:\school\MAD\DVDLogo\DVDLogo\bin\Debug\netstandard2.0\DVDLogo.dll
+C:\school\MAD\DVDLogo\DVDLogo\bin\Debug\netstandard2.0\ref\DVDLogo.dll
+C:\school\MAD\DVDLogo\DVDLogo\bin\Debug\netstandard2.0\DVDLogo.pdb
+C:\school\MAD\DVDLogo\DVDLogo\obj\Debug\netstandard2.0\DVDLogo.csproj.AssemblyReference.cache
+C:\school\MAD\DVDLogo\DVDLogo\obj\Debug\netstandard2.0\App.xaml.g.cs
+C:\school\MAD\DVDLogo\DVDLogo\obj\Debug\netstandard2.0\MainPage.xaml.g.cs
+C:\school\MAD\DVDLogo\DVDLogo\obj\Debug\netstandard2.0\DVDLogo.AssemblyInfoInputs.cache
+C:\school\MAD\DVDLogo\DVDLogo\obj\Debug\netstandard2.0\DVDLogo.AssemblyInfo.cs
+C:\school\MAD\DVDLogo\DVDLogo\obj\Debug\netstandard2.0\DVDLogo.csproj.CoreCompileInputs.cache
+C:\school\MAD\DVDLogo\DVDLogo\obj\Debug\netstandard2.0\XamlC.stamp
+C:\school\MAD\DVDLogo\DVDLogo\obj\Debug\netstandard2.0\DVDLogo.dll
+C:\school\MAD\DVDLogo\DVDLogo\obj\Debug\netstandard2.0\ref\DVDLogo.dll
+C:\school\MAD\DVDLogo\DVDLogo\obj\Debug\netstandard2.0\DVDLogo.pdb
+C:\school\MAD\DVDLogo - smaller grid\DVDLogo\bin\Debug\netstandard2.0\DVDLogo.deps.json
+C:\school\MAD\DVDLogo - smaller grid\DVDLogo\bin\Debug\netstandard2.0\DVDLogo.dll
+C:\school\MAD\DVDLogo - smaller grid\DVDLogo\bin\Debug\netstandard2.0\ref\DVDLogo.dll
+C:\school\MAD\DVDLogo - smaller grid\DVDLogo\bin\Debug\netstandard2.0\DVDLogo.pdb
+C:\school\MAD\DVDLogo - smaller grid\DVDLogo\obj\Debug\netstandard2.0\DVDLogo.csproj.AssemblyReference.cache
+C:\school\MAD\DVDLogo - smaller grid\DVDLogo\obj\Debug\netstandard2.0\App.xaml.g.cs
+C:\school\MAD\DVDLogo - smaller grid\DVDLogo\obj\Debug\netstandard2.0\MainPage.xaml.g.cs
+C:\school\MAD\DVDLogo - smaller grid\DVDLogo\obj\Debug\netstandard2.0\DVDLogo.AssemblyInfoInputs.cache
+C:\school\MAD\DVDLogo - smaller grid\DVDLogo\obj\Debug\netstandard2.0\DVDLogo.AssemblyInfo.cs
+C:\school\MAD\DVDLogo - smaller grid\DVDLogo\obj\Debug\netstandard2.0\DVDLogo.csproj.CoreCompileInputs.cache
+C:\school\MAD\DVDLogo - smaller grid\DVDLogo\obj\Debug\netstandard2.0\XamlC.stamp
+C:\school\MAD\DVDLogo - smaller grid\DVDLogo\obj\Debug\netstandard2.0\DVDLogo.dll
+C:\school\MAD\DVDLogo - smaller grid\DVDLogo\obj\Debug\netstandard2.0\ref\DVDLogo.dll
+C:\school\MAD\DVDLogo - smaller grid\DVDLogo\obj\Debug\netstandard2.0\DVDLogo.pdb
+C:\Users\timo\Documents\DVDLogo - smaller grid\DVDLogo\obj\Debug\netstandard2.0\DVDLogo.csproj.AssemblyReference.cache
+C:\Users\timo\Documents\DVDLogo - smaller grid\DVDLogo\obj\Debug\netstandard2.0\App.xaml.g.cs
+C:\Users\timo\Documents\DVDLogo - smaller grid\DVDLogo\obj\Debug\netstandard2.0\MainPage.xaml.g.cs
+C:\Users\timo\Documents\DVDLogo - smaller grid\DVDLogo\obj\Debug\netstandard2.0\DVDLogo.AssemblyInfoInputs.cache
+C:\Users\timo\Documents\DVDLogo - smaller grid\DVDLogo\obj\Debug\netstandard2.0\DVDLogo.AssemblyInfo.cs
+C:\Users\timo\Documents\DVDLogo - smaller grid\DVDLogo\obj\Debug\netstandard2.0\DVDLogo.csproj.CoreCompileInputs.cache
+C:\Users\timo\Documents\DVDLogo - smaller grid\DVDLogo\obj\Debug\netstandard2.0\DVDLogo.dll
+C:\Users\timo\Documents\DVDLogo - smaller grid\DVDLogo\obj\Debug\netstandard2.0\ref\DVDLogo.dll
+C:\Users\timo\Documents\DVDLogo - smaller grid\DVDLogo\obj\Debug\netstandard2.0\DVDLogo.pdb
+C:\Users\timo\Documents\DVDLogo - smaller grid\DVDLogo\bin\Debug\netstandard2.0\DVDLogo.deps.json
+C:\Users\timo\Documents\DVDLogo - smaller grid\DVDLogo\bin\Debug\netstandard2.0\DVDLogo.dll
+C:\Users\timo\Documents\DVDLogo - smaller grid\DVDLogo\bin\Debug\netstandard2.0\ref\DVDLogo.dll
+C:\Users\timo\Documents\DVDLogo - smaller grid\DVDLogo\bin\Debug\netstandard2.0\DVDLogo.pdb
+C:\Users\timo\Documents\DVDLogo - smaller grid\DVDLogo\obj\Debug\netstandard2.0\XamlC.stamp
