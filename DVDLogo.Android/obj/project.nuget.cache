@@ -1,10 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "Y8SShxmEnunEA3QNAFplq0uUsdBDeU2zKoj8OpqMJvDXN8mae0MYXvw4vv8OD2V54ovwCuinmbEprnYhRfSqzg==",
+  "dgSpecHash": "PWWaL9Ea1KHcClSUtAXzy237WVDRRMkKjp2ur3t2j/6B6q4hbhhbfkBZM+hqnyjUw8jUnjGUvmBnxf7paqnzkA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\timo\\Documents\\DVDLogo - smaller grid\\DVDLogo.Android\\DVDLogo.Android.csproj",
+  "projectFilePath": "C:\\Project\\DVD\\DVDLogoCornerHitXamarin\\DVDLogo.Android\\DVDLogo.Android.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\timo\\.nuget\\packages\\system.numerics.vectors\\4.5.0\\system.numerics.vectors.4.5.0.nupkg.sha512",
+    "C:\\Users\\Jens\\.nuget\\packages\\system.numerics.vectors\\4.5.0\\system.numerics.vectors.4.5.0.nupkg.sha512",
     "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\xamarin.androidx.activity\\1.1.0.5\\xamarin.androidx.activity.1.1.0.5.nupkg.sha512",
     "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\xamarin.androidx.annotation\\1.1.0.8\\xamarin.androidx.annotation.1.1.0.8.nupkg.sha512",
     "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\xamarin.androidx.annotation.experimental\\1.0.0.8\\xamarin.androidx.annotation.experimental.1.0.0.8.nupkg.sha512",

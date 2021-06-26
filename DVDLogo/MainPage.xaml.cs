@@ -40,6 +40,11 @@ namespace DVDLogo
             get { return ImageSource.FromResource($"DVDLogo.Images.{_imgNumber}.png"); }
         }
 
+        private int previousRandom = 0;
+
+
+
+
         //s10  779 412
         //s20  765 360
         private async void translateButton_Pressed(object sender, EventArgs e)
@@ -74,14 +79,15 @@ namespace DVDLogo
 
             //run 1
             uint speed1 = (uint)(3000 - ((int)width + rndHeight));
-            await translateButton.TranslateTo(width, rndHeight, speed1);
-            ImgNumber = rndImage[rnd.Next(0, 5)];
+            await translateButton.TranslateTo(width, rndHeight, 3000);
+            ImgNumber = rndImage[randomGenerator(0, 5)];
 
             //run2
             // als blok over helft komt
             if (rndHeight * 2 > height)
             {
-                await translateButton.TranslateTo(angleWidth, height, 1000);
+                await translateButton.TranslateTo(angleWidth, height, 3000);
+                ImgNumber = rndImage[randomGenerator(0, 5)];
             }
             else
             {
@@ -137,25 +143,37 @@ namespace DVDLogo
                     uint speed2 = (uint)(2000 - ((int)staticWidth + rndHeight));
                     if (right)
                     {
-                        await translateButton.TranslateTo(staticWidth, rndHeight * times, speed2);
+                        await translateButton.TranslateTo(staticWidth, rndHeight * times, 3000);
                         staticWidth = 0;
                         right = false;
-                        ImgNumber = rndImage[rnd.Next(0, 5)];
+                        ImgNumber = rndImage[randomGenerator(0, 5)];
                     }
                     else
                     {
-                        await translateButton.TranslateTo(staticWidth, rndHeight * times, speed2);
+                        await translateButton.TranslateTo(staticWidth, rndHeight * times, 3000);
                         staticWidth = width;
                         right = true;
-                        ImgNumber = rndImage[rnd.Next(0, 5)];
+                        ImgNumber = rndImage[randomGenerator(0, 5)];
                     }
                     times++;
                 }
             }
-            ImgNumber = rndImage[rnd.Next(0, 5)];
+            ImgNumber = rndImage[randomGenerator(0, 5)];
             await translateButton.TranslateTo(0, 0, 1000);
-            ImgNumber = rndImage[rnd.Next(0, 5)];
+            ImgNumber = rndImage[randomGenerator(0, 5)];
 
+        }
+
+
+        private int randomGenerator(int a, int b)
+        {
+            int random = rnd.Next(a, b);
+            while (previousRandom == random)
+            {
+                random = rnd.Next(a, b);
+            }
+            previousRandom = random;
+            return random;
         }
     }
 }

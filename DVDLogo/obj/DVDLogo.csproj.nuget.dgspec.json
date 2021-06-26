@@ -1,24 +1,24 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\timo\\Documents\\DVDLogo - smaller grid\\DVDLogo\\DVDLogo.csproj": {}
+    "C:\\Project\\DVD\\DVDLogoCornerHitXamarin\\DVDLogo\\DVDLogo.csproj": {}
   },
   "projects": {
-    "C:\\Users\\timo\\Documents\\DVDLogo - smaller grid\\DVDLogo\\DVDLogo.csproj": {
+    "C:\\Project\\DVD\\DVDLogoCornerHitXamarin\\DVDLogo\\DVDLogo.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\timo\\Documents\\DVDLogo - smaller grid\\DVDLogo\\DVDLogo.csproj",
+        "projectUniqueName": "C:\\Project\\DVD\\DVDLogoCornerHitXamarin\\DVDLogo\\DVDLogo.csproj",
         "projectName": "DVDLogo",
-        "projectPath": "C:\\Users\\timo\\Documents\\DVDLogo - smaller grid\\DVDLogo\\DVDLogo.csproj",
-        "packagesPath": "C:\\Users\\timo\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\timo\\Documents\\DVDLogo - smaller grid\\DVDLogo\\obj\\",
+        "projectPath": "C:\\Project\\DVD\\DVDLogoCornerHitXamarin\\DVDLogo\\DVDLogo.csproj",
+        "packagesPath": "C:\\Users\\Jens\\.nuget\\packages\\",
+        "outputPath": "C:\\Project\\DVD\\DVDLogoCornerHitXamarin\\DVDLogo\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
           "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\"
         ],
         "configFilePaths": [
-          "C:\\Users\\timo\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Jens\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"

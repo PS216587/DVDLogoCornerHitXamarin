@@ -40,3 +40,17 @@ C:\Users\timo\Documents\DVDLogo - smaller grid\DVDLogo\bin\Debug\netstandard2.0\
 C:\Users\timo\Documents\DVDLogo - smaller grid\DVDLogo\bin\Debug\netstandard2.0\ref\DVDLogo.dll
 C:\Users\timo\Documents\DVDLogo - smaller grid\DVDLogo\bin\Debug\netstandard2.0\DVDLogo.pdb
 C:\Users\timo\Documents\DVDLogo - smaller grid\DVDLogo\obj\Debug\netstandard2.0\XamlC.stamp
+C:\Project\DVD\DVDLogoCornerHitXamarin\DVDLogo\bin\Debug\netstandard2.0\DVDLogo.deps.json
+C:\Project\DVD\DVDLogoCornerHitXamarin\DVDLogo\bin\Debug\netstandard2.0\DVDLogo.dll
+C:\Project\DVD\DVDLogoCornerHitXamarin\DVDLogo\bin\Debug\netstandard2.0\ref\DVDLogo.dll
+C:\Project\DVD\DVDLogoCornerHitXamarin\DVDLogo\bin\Debug\netstandard2.0\DVDLogo.pdb
+C:\Project\DVD\DVDLogoCornerHitXamarin\DVDLogo\obj\Debug\netstandard2.0\DVDLogo.csproj.AssemblyReference.cache
+C:\Project\DVD\DVDLogoCornerHitXamarin\DVDLogo\obj\Debug\netstandard2.0\App.xaml.g.cs
+C:\Project\DVD\DVDLogoCornerHitXamarin\DVDLogo\obj\Debug\netstandard2.0\MainPage.xaml.g.cs
+C:\Project\DVD\DVDLogoCornerHitXamarin\DVDLogo\obj\Debug\netstandard2.0\DVDLogo.AssemblyInfoInputs.cache
+C:\Project\DVD\DVDLogoCornerHitXamarin\DVDLogo\obj\Debug\netstandard2.0\DVDLogo.AssemblyInfo.cs
+C:\Project\DVD\DVDLogoCornerHitXamarin\DVDLogo\obj\Debug\netstandard2.0\DVDLogo.csproj.CoreCompileInputs.cache
+C:\Project\DVD\DVDLogoCornerHitXamarin\DVDLogo\obj\Debug\netstandard2.0\XamlC.stamp
+C:\Project\DVD\DVDLogoCornerHitXamarin\DVDLogo\obj\Debug\netstandard2.0\DVDLogo.dll
+C:\Project\DVD\DVDLogoCornerHitXamarin\DVDLogo\obj\Debug\netstandard2.0\ref\DVDLogo.dll
+C:\Project\DVD\DVDLogoCornerHitXamarin\DVDLogo\obj\Debug\netstandard2.0\DVDLogo.pdb
