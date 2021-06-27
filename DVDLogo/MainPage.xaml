@@ -15,6 +15,7 @@
             </StackLayout>
         </Grid>
         <Button BackgroundColor="Transparent" Pressed="translateButton_Pressed"/>
+        <Button VerticalOptions="End" BackgroundColor="#33000000" x:Name="heighttxt" Pressed="Button_Pressed"/>
     </Grid>
 
 </ContentPage>
