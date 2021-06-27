@@ -45,6 +45,7 @@ namespace DVDLogo
         private int[] lastXY = { 0, 0 };
         private uint speed = 1000;
 
+        bool yes;
 
 
 
@@ -56,10 +57,11 @@ namespace DVDLogo
             double height = realHeight + 0;
 
             int rndWidth = rnd.Next(45, (int)width) + 1;
-            //int rndHeight = 59;
+            //int rndHeight = 365;
             int rndHeight = rnd.Next(45, (int)height) + 1;
             heighttxt.Text = rndHeight.ToString();
 
+            double angle = Math.Atan(realWidth / rndHeight) * 180 / Math.PI;
             double tangensWidth = Math.Tan(Math.Atan(realWidth / rndHeight) * 180 / Math.PI * (Math.PI / 180)) * (realHeight - rndHeight);
 
             double rndHeightSom = 0;
@@ -88,6 +90,8 @@ namespace DVDLogo
                 newLine((int)angleWidth, (int)height);
                 await translateButton.TranslateTo(angleWidth, height, speed);
                 ImgNumber = rndImage[randomGenerator(0, 5)];
+
+                yes = true;
             }
             else
             {
@@ -107,39 +111,16 @@ namespace DVDLogo
                         double angleWidth2 = realWidth - tangensWidth2;
                         times = 1;
 
-                        //hier
                         if (right)
                         {
-                            //if (angleWidth2 < 0)
-                            //{
-                            //    staticWidth = (angleWidth2 * -1);
-                            //}
-                            //else
-                            //{
-                            staticWidth = width - tangensWidth2; //fixed (347)
-                            //}
+                            staticWidth = width - tangensWidth2;
                         }
                         else
                         {
-                            //if (tangensWidth2 < 0)
-                            //{
-                            //    staticWidth = (tangensWidth2 * -1);
-                            //}
-                            //else
-                            //{
                             staticWidth = tangensWidth2;
-                            //}
                         }
-                        //hier ook
-                        //if (staticWidth > width)
-                        //{
-                        //    staticWidth = width - rnd.Next(1, 100);
-                        //}
                         rndHeight = (int)height;
                     }
-
-
-                    uint speed2 = (uint)(2000 - ((int)staticWidth + rndHeight));
                     if (right)
                     {
                         newLine((int)staticWidth, rndHeight * times);
@@ -160,11 +141,49 @@ namespace DVDLogo
                 }
             }
 
+
+            //run 3
+            if (yes)
+            {
+                double angle2 = 90 - angle;
+                double base2 = width - tangensWidth;
+                double radians2 = angle2 * (Math.PI / 180);
+                double heightFromBottom = Math.Tan(radians2) * base2;
+                double x = height - heightFromBottom;
+
+                newLine(0, (int)x);
+                await translateButton.TranslateTo(0, x, speed);
+            }
+            //run4
+            //if (heightFromBottom * 2 > height)
+            if (yes)
+            {
+                newLine((int)width, 300);
+                await translateButton.TranslateTo(width, 300, speed);
+            }
+            else
+            {
+                //double angle3 = 90 - angle;
+                //double base2 = width - tangensWidth;
+                //double radians2 = angle2 * (Math.PI / 180);
+                //double heightFromBottom = Math.Tan(radians2) * base2;
+                //double x = height - heightFromBottom;
+                //newLine(0, (int)x);
+                //await translateButton.TranslateTo(0, x, speed);
+
+                //newLine((int)width, (int)(height - (heightFromBottom * 2)));
+                //await translateButton.TranslateTo(width, height - (heightFromBottom * 2), speed);
+            }
+
+
+
             newLine(0, 0);
             await translateButton.TranslateTo(0, 0, speed);
             ImgNumber = rndImage[randomGenerator(0, 5)];
             lastXY[0] = 0;
             lastXY[1] = 0;
+
+            yes = false;
         }
 
 
