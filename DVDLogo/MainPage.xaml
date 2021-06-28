@@ -11,10 +11,10 @@
             </StackLayout>
             <StackLayout VerticalOptions="Start" HorizontalOptions="Start">
                 <!--<Button  Rotation="0" TranslationX="0" WidthRequest="100" HeightRequest="100" Margin="-50,-50,0,0" x:Name="translateButton" Pressed="translateButton_Pressed" BackgroundColor="Red"/>-->
-                <Image x:Name="translateButton" WidthRequest="100" HeightRequest="100" Margin="-50,-50,0,0" Source="{Binding dvdImage, Mode=OneWay}"  />
+                <Image x:Name="dvd" WidthRequest="100" HeightRequest="100" Margin="-50,-50,0,0" Source="{Binding dvdImage, Mode=OneWay}"  />
             </StackLayout>
         </Grid>
-        <Button BackgroundColor="Transparent" Pressed="translateButton_Pressed"/>
+        <Button BackgroundColor="Transparent" Pressed="dvd_Pressed"/>
         <Button VerticalOptions="End" BackgroundColor="#33000000" x:Name="heighttxt" Pressed="Button_Pressed"/>
     </Grid>
 

@@ -2142,18 +2142,18 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Jens\\.nuget\\packages\\": {},
+    "C:\\Users\\Jenco\\.nuget\\packages\\": {},
     "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {},
     "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Project\\DVD\\DVDLogoCornerHitXamarin\\DVDLogo.Android\\DVDLogo.Android.csproj",
+      "projectUniqueName": "C:\\school\\MAD\\DVD\\DVDLogoCornerHitXamarin\\DVDLogo.Android\\DVDLogo.Android.csproj",
       "projectName": "DVDLogo.Android",
-      "projectPath": "C:\\Project\\DVD\\DVDLogoCornerHitXamarin\\DVDLogo.Android\\DVDLogo.Android.csproj",
-      "packagesPath": "C:\\Users\\Jens\\.nuget\\packages\\",
-      "outputPath": "C:\\Project\\DVD\\DVDLogoCornerHitXamarin\\DVDLogo.Android\\obj\\",
+      "projectPath": "C:\\school\\MAD\\DVD\\DVDLogoCornerHitXamarin\\DVDLogo.Android\\DVDLogo.Android.csproj",
+      "packagesPath": "C:\\Users\\Jenco\\.nuget\\packages\\",
+      "outputPath": "C:\\school\\MAD\\DVD\\DVDLogoCornerHitXamarin\\DVDLogo.Android\\obj\\",
       "projectStyle": "PackageReference",
       "skipContentFileWrite": true,
       "fallbackFolders": [
@@ -2161,7 +2161,7 @@
         "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\"
       ],
       "configFilePaths": [
-        "C:\\Users\\Jens\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Jenco\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
@@ -2176,8 +2176,8 @@
       "frameworks": {
         "monoandroid11.0": {
           "projectReferences": {
-            "C:\\Project\\DVD\\DVDLogoCornerHitXamarin\\DVDLogo\\DVDLogo.csproj": {
-              "projectPath": "C:\\Project\\DVD\\DVDLogoCornerHitXamarin\\DVDLogo\\DVDLogo.csproj"
+            "C:\\school\\MAD\\DVD\\DVDLogoCornerHitXamarin\\DVDLogo\\DVDLogo.csproj": {
+              "projectPath": "C:\\school\\MAD\\DVD\\DVDLogoCornerHitXamarin\\DVDLogo\\DVDLogo.csproj"
             }
           }
         }

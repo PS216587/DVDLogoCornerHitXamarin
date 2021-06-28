@@ -45,145 +45,340 @@ namespace DVDLogo
         private int[] lastXY = { 0, 0 };
         private uint speed = 1000;
 
+        private double prevAngle;
+
         bool yes;
+        bool right;
+
+        double rndHeightSom = 0;
+        int times = 1;
+        double x;
+        double y;
+        double tangHeight = 0;
+        bool toBottom = true;
+        double myHeight = 0;
+        bool firstFromBottom = false;
+        bool overHelft = false;
+        int rondeBottom = 0;
+        double eersteGrond = 0;
 
 
-
-        private async void translateButton_Pressed(object sender, EventArgs e)
+        private async void dvd_Pressed(object sender, EventArgs e)
         {
-            double realWidth = myGrid.Width;
-            double width = realWidth;
-            double realHeight = myGrid.Height;
-            double height = realHeight + 0;
+            double width = myGrid.Width;
+            double height = myGrid.Height;
 
             int rndWidth = rnd.Next(45, (int)width) + 1;
-            //int rndHeight = 365;
+            //int rndHeight = 400;
             int rndHeight = rnd.Next(45, (int)height) + 1;
             heighttxt.Text = rndHeight.ToString();
 
-            double angle = Math.Atan(realWidth / rndHeight) * 180 / Math.PI;
-            double tangensWidth = Math.Tan(Math.Atan(realWidth / rndHeight) * 180 / Math.PI * (Math.PI / 180)) * (realHeight - rndHeight);
+            tangHeight = rndHeight;
+            rndHeightSom += rndHeight;
 
-            double rndHeightSom = 0;
+
+
+
 
             //fix overflows
-            double angleWidth = realWidth - tangensWidth;
-            if (angleWidth < 0)
-            {
-                angleWidth = 0;
-            }
-            if (angleWidth > width)
-            {
-                angleWidth = width;
-            }
+            //double angleWidth = width - tangensWidth;
+            //if (angleWidth < 0)
+            //{
+            //    angleWidth = 0;
+            //}
+            //if (angleWidth > width)
+            //{
+            //    angleWidth = width;
+            //}
+
 
 
             //run 1
             newLine((int)width, rndHeight);
-            await translateButton.TranslateTo(width, rndHeight, speed);
+            await dvd.TranslateTo(width, rndHeight, speed);
             ImgNumber = rndImage[randomGenerator(0, 5)];
 
-            //run2
-            // als blok over helft komt
-            if (rndHeight * 2 > height)
+            //runs
+            for (int i = 0; i >= 0; i++)
             {
-                newLine((int)angleWidth, (int)height);
-                await translateButton.TranslateTo(angleWidth, height, speed);
-                ImgNumber = rndImage[randomGenerator(0, 5)];
 
-                yes = true;
-            }
-            else
-            {
-                bool right = false;
-                int times = 2;
-                double staticWidth = 0;
-                rndHeightSom += rndHeight;
-                // zolang grond nog niet geraakt is
-                while (rndHeightSom < height)
+                if (toBottom)
                 {
                     rndHeightSom += rndHeight;
-
-                    // als laatste tik voor dat blok de grond raakt
-                    if (rndHeightSom > height)
+                    //naar links
+                    if (!right)
                     {
-                        double tangensWidth2 = Math.Tan(Math.Atan(realWidth / rndHeight) * 180 / Math.PI * (Math.PI / 180)) * ((rndHeight * times) - realHeight);
-                        double angleWidth2 = realWidth - tangensWidth2;
-                        times = 1;
-
-                        if (right)
+                        //als tegen zijkant komt
+                        if (rndHeightSom < height)
                         {
-                            staticWidth = width - tangensWidth2;
+                            times++;
+                            x = 0;
+                            y = rndHeight * times;
                         }
+                        //tegen onderkant scherm
                         else
                         {
-                            staticWidth = tangensWidth2;
+                            double angle = Math.Atan(width / tangHeight) * 180 / Math.PI;
+                            double tangensWidth = Math.Tan(angle * (Math.PI / 180)) * (height - rndHeightSom + rndHeight);
+                            prevAngle = angle;
+
+                            x = width - tangensWidth;
+                            y = height;
+                            rndHeightSom = 0;
+                            toBottom = false;
+
+                            //tangHeight aanpassen
                         }
-                        rndHeight = (int)height;
-                    }
-                    if (right)
-                    {
-                        newLine((int)staticWidth, rndHeight * times);
-                        await translateButton.TranslateTo(staticWidth, rndHeight * times, speed);
-                        ImgNumber = rndImage[randomGenerator(0, 5)];
-                        staticWidth = 0;
-                        right = false;
-                    }
-                    else
-                    {
-                        newLine((int)staticWidth, rndHeight * times);
-                        await translateButton.TranslateTo(staticWidth, rndHeight * times, speed);
-                        ImgNumber = rndImage[randomGenerator(0, 5)];
-                        staticWidth = width;
                         right = true;
                     }
-                    times++;
+                    //naar rechts
+                    else
+                    {
+                        //als tegen zijkant komt
+                        if (rndHeightSom < height)
+                        {
+                            times++;
+                            x = width;
+                            y = rndHeight * times;
+                        }
+                        //tegen onderkant scherm
+                        else
+                        {
+                            double angle = Math.Atan(width / tangHeight) * 180 / Math.PI;
+                            double radians = angle * (Math.PI / 180);
+                            double tangensWidth = Math.Tan(radians) * (height - rndHeightSom + rndHeight);
+                            prevAngle = angle;
+
+                            x = tangensWidth;
+                            y = height;
+                            rndHeightSom = 0;
+                            toBottom = false;
+
+                            //tangHeight aanpassen
+                        }
+                        right = false;
+                    }
                 }
+                // to top
+                else
+                {
+                    rndHeightSom += myHeight;
+                    times = 0;
+                    rondeBottom++;
+
+                    double revAngle = 90 - prevAngle;
+                    double radians = revAngle * (Math.PI / 180);
+                    double heightFromBottom = Math.Tan(radians) * lastXY[0];
+
+                    double heightFromBottom2 = Math.Tan(radians) * width;
+
+                    if (rndHeightSom == 0)
+                    {
+                        eersteGrond += heightFromBottom;
+                        rndHeightSom += heightFromBottom;
+                        rndHeightSom += heightFromBottom2;
+                        firstFromBottom = true;
+                    }
+                    //als 2e keer over de helft komt
+                    if ((eersteGrond + heightFromBottom2) > (height / 2) && rondeBottom == 3)
+                    {
+                        overHelft = true;
+                    }
+
+                    // naar rechts
+                    if (!right)
+                    {
+                        //==================================
+                        //als tegen zijkant komt
+                        if (rndHeightSom < height && !overHelft)
+                        {
+                            times++;
+                            x = width;
+                            if (firstFromBottom)
+                            {
+                                y = height - heightFromBottom;
+                                firstFromBottom = false;
+                            }
+                            else
+                            {
+                                rndHeightSom += heightFromBottom2;
+                                y = height - (heightFromBottom2 * times) - (height - lastXY[1]);
+                            }
+                        }
+                        //tegen onderkant scherm
+                        else
+                        {
+                            //double angle = Math.Atan(width / tangHeight) * 180 / Math.PI;
+                            //double tangensWidth = Math.Tan(angle * (Math.PI / 180)) * (height - rndHeightSom + rndHeight);
+
+                            //x = width - tangensWidth;
+                            //y = height;
+                            //toBottom = false;
+                            await DisplayAlert("j", "DONE", "OK");
+
+                            //tangHeight aanpassen
+                        }
+                        right = true;
+                    }
+                    // naar links
+                    else
+                    {
+                        //==================================
+                        //als tegen zijkant komt
+                        if (rndHeightSom < height && !overHelft)
+                        {
+                            times++;
+                            x = 0;
+                            if (firstFromBottom)
+                            {
+                                y = height - heightFromBottom;
+                                firstFromBottom = false;
+                            }
+                            else
+                            {
+                                rndHeightSom += heightFromBottom2;
+                                y = height - (heightFromBottom2 * times) - (height - lastXY[1]);
+                            }
+                        }
+                        //tegen onderkant scherm
+                        else
+                        {
+                            //double angle = Math.Atan(width / tangHeight) * 180 / Math.PI;
+                            //double tangensWidth = Math.Tan(angle * (Math.PI / 180)) * (height - rndHeightSom + rndHeight);
+
+                            //x = width - tangensWidth;
+                            //y = height;
+                            //toBottom = false;
+                            await DisplayAlert("j", "DONE", "OK");
+
+                            //tangHeight aanpassen
+                        }
+                        right = false;
+                    }
+                }
+
+
+
+
+                newLine((int)x, (int)y);
+                await dvd.TranslateTo(x, y, speed);
+                ImgNumber = rndImage[randomGenerator(0, 5)];
             }
-
-
-            //run 3
-            if (yes)
-            {
-                double angle2 = 90 - angle;
-                double base2 = width - tangensWidth;
-                double radians2 = angle2 * (Math.PI / 180);
-                double heightFromBottom = Math.Tan(radians2) * base2;
-                double x = height - heightFromBottom;
-
-                newLine(0, (int)x);
-                await translateButton.TranslateTo(0, x, speed);
-            }
-            //run4
-            //if (heightFromBottom * 2 > height)
-            if (yes)
-            {
-                newLine((int)width, 300);
-                await translateButton.TranslateTo(width, 300, speed);
-            }
-            else
-            {
-                //double angle3 = 90 - angle;
-                //double base2 = width - tangensWidth;
-                //double radians2 = angle2 * (Math.PI / 180);
-                //double heightFromBottom = Math.Tan(radians2) * base2;
-                //double x = height - heightFromBottom;
-                //newLine(0, (int)x);
-                //await translateButton.TranslateTo(0, x, speed);
-
-                //newLine((int)width, (int)(height - (heightFromBottom * 2)));
-                //await translateButton.TranslateTo(width, height - (heightFromBottom * 2), speed);
-            }
-
-
 
             newLine(0, 0);
-            await translateButton.TranslateTo(0, 0, speed);
+            await dvd.TranslateTo(0, 0, speed);
             ImgNumber = rndImage[randomGenerator(0, 5)];
             lastXY[0] = 0;
             lastXY[1] = 0;
+            tangHeight = 0;
+            rndHeightSom = 0;
+            right = false;
+            times = 1;
+            toBottom = true;
 
-            yes = false;
+
+
+            //run2
+            // als blok over helft komt
+            //if (rndHeight * 2 > height)
+            //{
+            //    newLine((int)angleWidth, (int)height);
+            //    await dvd.TranslateTo(angleWidth, height, speed);
+            //    ImgNumber = rndImage[randomGenerator(0, 5)];
+
+            //    yes = true;
+            //}
+            //else
+            //{
+            //    bool right = false;
+            //    int times = 2;
+            //    double staticWidth = 0;
+            //    rndHeightSom += rndHeight;
+            //    // zolang grond nog niet geraakt is
+            //    while (rndHeightSom < height)
+            //    {
+            //        rndHeightSom += rndHeight;
+
+            //        // als laatste tik voor dat blok de grond raakt
+            //        if (rndHeightSom > height)
+            //        {
+            //            double tangensWidth2 = Math.Tan(Math.Atan(width / rndHeight) * 180 / Math.PI * (Math.PI / 180)) * ((rndHeight * times) - height);
+            //            double angleWidth2 = width - tangensWidth2;
+            //            times = 1;
+
+            //            if (right)
+            //            {
+            //                staticWidth = width - tangensWidth2;
+            //            }
+            //            else
+            //            {
+            //                staticWidth = tangensWidth2;
+            //            }
+            //            rndHeight = (int)height;
+            //        }
+            //        if (right)
+            //        {
+            //            newLine((int)staticWidth, rndHeight * times);
+            //            await dvd.TranslateTo(staticWidth, rndHeight * times, speed);
+            //            ImgNumber = rndImage[randomGenerator(0, 5)];
+            //            staticWidth = 0;
+            //            right = false;
+            //        }
+            //        else
+            //        {
+            //            newLine((int)staticWidth, rndHeight * times);
+            //            await dvd.TranslateTo(staticWidth, rndHeight * times, speed);
+            //            ImgNumber = rndImage[randomGenerator(0, 5)];
+            //            staticWidth = width;
+            //            right = true;
+            //        }
+            //        times++;
+            //    }
+            //}
+
+
+            ////run 3
+            //if (yes)
+            //{
+            //    double angle2 = 90 - angle;
+            //    double base2 = width - tangensWidth;
+            //    double radians2 = angle2 * (Math.PI / 180);
+            //    double heightFromBottom = Math.Tan(radians2) * base2;
+            //    double x = height - heightFromBottom;
+
+            //    newLine(0, (int)x);
+            //    await dvd.TranslateTo(0, x, speed);
+            //}
+            ////run4
+            ////if (heightFromBottom * 2 > height)
+            //if (yes)
+            //{
+            //    newLine((int)width, 300);
+            //    await dvd.TranslateTo(width, 300, speed);
+            //}
+            //else
+            //{
+            //    //double angle3 = 90 - angle;
+            //    //double base2 = width - tangensWidth;
+            //    //double radians2 = angle2 * (Math.PI / 180);
+            //    //double heightFromBottom = Math.Tan(radians2) * base2;
+            //    //double x = height - heightFromBottom;
+            //    //newLine(0, (int)x);
+            //    //await dvd.TranslateTo(0, x, speed);
+
+            //    //newLine((int)width, (int)(height - (heightFromBottom * 2)));
+            //    //await dvd.TranslateTo(width, height - (heightFromBottom * 2), speed);
+            //}
+
+
+
+            //newLine(0, 0);
+            //await dvd.TranslateTo(0, 0, speed);
+            //ImgNumber = rndImage[randomGenerator(0, 5)];
+            //lastXY[0] = 0;
+            //lastXY[1] = 0;
+
+            //yes = false;
         }
 
 
@@ -211,8 +406,7 @@ namespace DVDLogo
             //speed berekening
             double a = Math.Abs(lastXY[0] - x2);
             double b = Math.Abs(lastXY[1] - y2);
-            speed = (uint)Math.Sqrt(Math.Pow(a, 2) + Math.Pow(b, 2)) * 8;
-
+            speed = (uint)Math.Sqrt(Math.Pow(a, 2) + Math.Pow(b, 2)) * 4;
 
             lastXY[0] = x2;
             lastXY[1] = y2;

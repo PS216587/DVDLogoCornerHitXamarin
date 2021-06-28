@@ -54,3 +54,17 @@ C:\Project\DVD\DVDLogoCornerHitXamarin\DVDLogo\obj\Debug\netstandard2.0\XamlC.st
 C:\Project\DVD\DVDLogoCornerHitXamarin\DVDLogo\obj\Debug\netstandard2.0\DVDLogo.dll
 C:\Project\DVD\DVDLogoCornerHitXamarin\DVDLogo\obj\Debug\netstandard2.0\ref\DVDLogo.dll
 C:\Project\DVD\DVDLogoCornerHitXamarin\DVDLogo\obj\Debug\netstandard2.0\DVDLogo.pdb
+C:\school\MAD\DVD\DVDLogoCornerHitXamarin\DVDLogo\bin\Debug\netstandard2.0\DVDLogo.deps.json
+C:\school\MAD\DVD\DVDLogoCornerHitXamarin\DVDLogo\bin\Debug\netstandard2.0\DVDLogo.dll
+C:\school\MAD\DVD\DVDLogoCornerHitXamarin\DVDLogo\bin\Debug\netstandard2.0\ref\DVDLogo.dll
+C:\school\MAD\DVD\DVDLogoCornerHitXamarin\DVDLogo\bin\Debug\netstandard2.0\DVDLogo.pdb
+C:\school\MAD\DVD\DVDLogoCornerHitXamarin\DVDLogo\obj\Debug\netstandard2.0\DVDLogo.csproj.AssemblyReference.cache
+C:\school\MAD\DVD\DVDLogoCornerHitXamarin\DVDLogo\obj\Debug\netstandard2.0\App.xaml.g.cs
+C:\school\MAD\DVD\DVDLogoCornerHitXamarin\DVDLogo\obj\Debug\netstandard2.0\MainPage.xaml.g.cs
+C:\school\MAD\DVD\DVDLogoCornerHitXamarin\DVDLogo\obj\Debug\netstandard2.0\DVDLogo.AssemblyInfoInputs.cache
+C:\school\MAD\DVD\DVDLogoCornerHitXamarin\DVDLogo\obj\Debug\netstandard2.0\DVDLogo.AssemblyInfo.cs
+C:\school\MAD\DVD\DVDLogoCornerHitXamarin\DVDLogo\obj\Debug\netstandard2.0\DVDLogo.csproj.CoreCompileInputs.cache
+C:\school\MAD\DVD\DVDLogoCornerHitXamarin\DVDLogo\obj\Debug\netstandard2.0\XamlC.stamp
+C:\school\MAD\DVD\DVDLogoCornerHitXamarin\DVDLogo\obj\Debug\netstandard2.0\DVDLogo.dll
+C:\school\MAD\DVD\DVDLogoCornerHitXamarin\DVDLogo\obj\Debug\netstandard2.0\ref\DVDLogo.dll
+C:\school\MAD\DVD\DVDLogoCornerHitXamarin\DVDLogo\obj\Debug\netstandard2.0\DVDLogo.pdb
